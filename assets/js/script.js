@@ -46,12 +46,20 @@ blocks = setInterval(function () {
     var holeLast = document.getElementById("hole" + (counter - 1));
 
     // Change Game Level
-    if (counter > 15) {
-        gameLevel = 1;
-    } else if (counter > 20) {
+    if (counter - 9 > 15) {
+        gameLevel = 0.8;
+    } else if (counter - 9 > 20) {
+        gameLevel = 1.2;
+    } else if (counter - 9 > 25) {
         gameLevel = 1.5;
-    } else if (counter > 25) {
+    } else if (counter - 9 > 30) {
+        gameLevel = 1.7;
+    } else if (counter - 9 > 35) {
         gameLevel = 2;
+    } else if (counter - 9 > 40) {
+        gameLevel = 2.3;
+    } else if (counter - 9 > 45) {
+        gameLevel = 2.5;
     }
 
     // Calc Last Block Top
